@@ -14,11 +14,11 @@ To deploy and interact with this contract, you can use Remix, an online Solidity
 
 1. Go to the Remix website at https://remix.ethereum.org/.
 
-2.Create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., Token.sol).
+2.Create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., token.sol).
 
 3.Copy and paste the provided Solidity code into the file.
 
-4.Compile the code by clicking on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile Token.sol" button.
+4.Compile the code by clicking on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile token.sol" button.
 
 6.Deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "Token" contract from the dropdown menu, and then click on the "Deploy" button.
 Once the contract is deployed, you can interact with it by calling its functions.
