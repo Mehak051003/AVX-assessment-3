@@ -1,10 +1,10 @@
 # Creating our own ERC20 Token
 
-This Solidity program implements an ERC20 token called "Mehak" with the symbol "MK". It includes functionalities for minting, transferring, and burning tokens. Below is the detailed description and instructions for using this contract.
+This Solidity program implements an ERC20 token with the symbol. It includes functionalities for minting, transferring, and burning tokens. Below is the detailed description and instructions for using this contract.
 
 ## Description
 
-This contract defines an ERC20 token named "Mehak" with the symbol "MK". It allows for the minting of new tokens by the contract owner, transferring tokens between addresses, and burning tokens. The contract provides basic functionalities required by the ERC20 token standard.
+This contract defines an ERC20 token with the symbol. It allows for the minting of new tokens by the contract owner, transferring tokens between addresses, and burning tokens. The contract provides basic functionalities required by the ERC20 token standard.
 
 ## Getting Started
 
@@ -30,10 +30,9 @@ Minting tokens: Only the owner of the contract can mint new tokens. Call the min
 
 Transferring tokens: Call the transfer function with the recipient's address and the amount of tokens to transfer.
 
-Burning tokens: Call the burn function with the sender's address and the amount of tokens to burn.
+Approve tokens: Call the approve function with the sender's address and the amount of tokens to approve.
 
-![image](https://github.com/Mehak051003/AVX-assessment-3/assets/118992603/6292dae8-7023-4615-8301-3a34e5b1d1d5)
-
+![image](https://github.com/Mehak051003/AVX-assessment-3/assets/118992603/182809fa-ea1e-430a-bc30-f43e7f375ed9)
 
 ## Authors
 
