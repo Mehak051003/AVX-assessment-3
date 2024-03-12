@@ -30,9 +30,52 @@ Minting tokens: Only the owner of the contract can mint new tokens. Call the min
 
 Transferring tokens: Call the transfer function with the recipient's address and the amount of tokens to transfer.
 
-Approve tokens: Call the approve function with the sender's address and the amount of tokens to approve.
+Burn tokens: Call the burn function with the sender's address and the amount of tokens to approve.
 
-![image](https://github.com/Mehak051003/AVX-assessment-3/assets/118992603/182809fa-ea1e-430a-bc30-f43e7f375ed9)
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.2;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract MyToken is ERC20 {
+
+    address owner;
+    constructor(string memory name, string memory symbol) ERC20(name, symbol) {
+        owner = msg.sender;
+        // Mint initial supply to the contract owner
+        _mint(msg.sender, 1000 * 10 ** decimals());
+    }
+
+    modifier checkAmount(uint amount) {
+        require(amount > 0, "Transfer amount must be greater than 0");
+        _;
+    }
+
+    modifier onlyOwner {
+        require(msg.sender == owner, "Not the Owner");
+        _;
+    }
+
+    function mint(address to, uint amount) external onlyOwner {
+        // Allowing only the owner to mint new tokens
+        _mint(to, amount);
+    }
+
+    function burn(uint amount) external checkAmount(amount) {
+        // Allowing any user to burn their own tokens
+        _burn(msg.sender, amount);
+    }
+
+    function transfer(address to, uint amount) public checkAmount(amount) override returns (bool) {
+        // Overriding transfer function
+        return super.transfer(to, amount);
+    }
+}
+```
+
+![image](https://github.com/Mehak051003/AVX-assessment-3/assets/118992603/37f2e4e4-d663-47f1-8692-c77e03f9b887)
+
 
 ## Authors
 
